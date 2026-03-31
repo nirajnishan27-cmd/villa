@@ -6,23 +6,28 @@
 const cur = document.getElementById('cursor');
 const cr  = document.getElementById('cring');
 let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.left = mx + 'px';
-  cur.style.top  = my + 'px';
-});
-(function loop() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  cr.style.left = rx + 'px';
-  cr.style.top  = ry + 'px';
-  requestAnimationFrame(loop);
-})();
+if (cur && cr) {
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    cur.style.left = mx + 'px';
+    cur.style.top  = my + 'px';
+  });
+  (function loop() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    cr.style.left = rx + 'px';
+    cr.style.top  = ry + 'px';
+    requestAnimationFrame(loop);
+  })();
+}
 
 // ── Nav Scroll ──
-window.addEventListener('scroll', () => {
-  document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
-});
+const mainNav = document.getElementById('nav');
+if (mainNav) {
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('scrolled', scrollY > 60);
+  });
+}
 
 // ── Mobile Menu ── (fixed: removed stray 'x' bug)
 function toggleMob() {
