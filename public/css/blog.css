@@ -524,6 +524,8 @@ body {
 }
 @media (max-width: 680px) {
   .bl-hero, .bp-hero    { padding: 7rem 1.5rem 3.5rem; }
+  .nav-links, .nav-wa { display: none; }
+  .hamburger { display: flex; }
   .bl-wrap, .bp-wrap    { padding: 0 1.5rem; }
   .bl-featured, .bl-grid-section, .bp-article { padding: 3.5rem 0; }
   .bl-grid              { grid-template-columns: 1fr; }

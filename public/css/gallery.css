@@ -389,6 +389,8 @@ body  {
 }
 @media (max-width: 680px) {
   .gl-hero         { padding: 7rem 1.5rem 3rem; }
+  .nav-links, .nav-wa { display: none; }
+  .hamburger { display: flex; }
   .gl-hero-mosaic  { grid-template-columns: 1fr 1fr; height: 220px; }
   .gl-hero-stats   { gap: 1.2rem; }
   .gl-grid         { padding: 0 1rem; gap: .45rem; }

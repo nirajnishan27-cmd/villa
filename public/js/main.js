@@ -35,27 +35,41 @@ function toggleMob() {
   if (!m) {
     m = document.createElement('div');
     m.id = 'mob';
-    m.style.cssText = 'position:fixed;top:62px;left:0;right:0;z-index:499;background:rgba(13,43,26,0.98);backdrop-filter:blur(16px);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:1.3rem;';
-    [
-      ['About',     '#about'],
-      ['Amenities', '#amenities'],
-      ['Gallery',   '#gallery'],
-      ['Reviews',   '#reviews'],
-      ['Location',  '#map-section'],
-      ['Book Now',  '#booking']
-    ].forEach(([t, h]) => {
+    m.style.cssText = 'position:fixed;top:62px;left:0;right:0;bottom:0;z-index:499;background:rgba(10,20,12,0.98);backdrop-filter:blur(16px);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:0;overflow-y:auto;';
+
+    // Determine links based on current page
+    const isHome      = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    const isAreaGuide = window.location.pathname.includes('area-guide');
+    const isGallery   = window.location.pathname.includes('gallery');
+    const isBlog      = window.location.pathname.includes('blog');
+
+    // Always show these
+    const links = [
+      ['🏠 Home',        '/'],
+      ['📖 About',       isHome ? '#about'      : '/#about'],
+      ['✨ Amenities',   isHome ? '#amenities'  : '/#amenities'],
+      ['🖼️ Gallery',    '/gallery'],
+      ['⭐ Reviews',     isHome ? '#reviews'    : '/#reviews'],
+      ['📍 Location',   isHome ? '#map-section' : '/#map-section'],
+      ['🗺️ Area Guide', '/area-guide'],
+      ['✍️ Blog',       '/blog'],
+      ['📅 Book Now',   isHome ? '#booking'     : '/#booking'],
+    ];
+
+    links.forEach(([t, h]) => {
       const a = document.createElement('a');
       a.textContent = t;
       a.href = h;
-      a.style.cssText = 'color:#fefdf8;font-size:1.1rem;text-decoration:none;letter-spacing:0.06em;border-bottom:1px solid rgba(255,255,255,0.08);padding-bottom:0.8rem;';
+      a.style.cssText = 'color:#fefdf8;font-size:1rem;text-decoration:none;letter-spacing:0.05em;border-bottom:1px solid rgba(255,255,255,0.07);padding:0.9rem 0;display:block;';
       a.onclick = () => m.remove();
       m.appendChild(a);
     });
+
     const wa = document.createElement('a');
     wa.href = 'https://wa.me/917406012727';
     wa.target = '_blank';
     wa.textContent = '💬 WhatsApp: +91 74060 12727';
-    wa.style.cssText = 'color:#25D366;font-size:1rem;text-decoration:none;font-weight:500;';
+    wa.style.cssText = 'color:#25D366;font-size:1rem;text-decoration:none;font-weight:600;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.1);';
     m.appendChild(wa);
     document.body.appendChild(m);
   } else {
