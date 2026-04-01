@@ -35,7 +35,14 @@ function toggleMob() {
   if (!m) {
     m = document.createElement('div');
     m.id = 'mob';
-    m.style.cssText = 'position:fixed;top:62px;left:0;right:0;bottom:0;z-index:499;background:rgba(10,20,12,0.98);backdrop-filter:blur(16px);padding:2rem 1.5rem;display:flex;flex-direction:column;gap:0;overflow-y:auto;';
+    m.style.cssText = 'position:fixed;top:0;left:0;right:0;bottom:0;z-index:9000;background:rgba(8,12,10,0.98);backdrop-filter:blur(20px);padding:5rem 2rem 2rem;display:flex;flex-direction:column;gap:0;overflow-y:auto;';
+
+    // Close button
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '✕';
+    closeBtn.style.cssText = 'position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:rgba(255,255,255,0.6);font-size:1.4rem;cursor:pointer;padding:0.4rem;';
+    closeBtn.onclick = () => m.remove();
+    m.appendChild(closeBtn);
 
     // Determine links based on current page
     const isHome      = window.location.pathname === '/' || window.location.pathname === '/index.html';

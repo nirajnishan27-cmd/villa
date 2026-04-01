@@ -371,6 +371,8 @@ body  {
 
 /* ── RESPONSIVE ───────────────────────────────── */
 @media (max-width: 1050px) {
+  .nav-links, .nav-wa { display: none; }
+  .hamburger          { display: flex !important; }
   .gl-hero           { grid-template-columns: 1fr; padding: 9rem 2.5rem 4rem; }
   .gl-hero-mosaic    { display: grid; grid-template-columns: 1fr 1fr; height: 300px; margin-top: 2.5rem; }
   .gl-mosaic-item--1 { grid-row: span 1; }
@@ -389,8 +391,6 @@ body  {
 }
 @media (max-width: 680px) {
   .gl-hero         { padding: 7rem 1.5rem 3rem; }
-  .nav-links, .nav-wa { display: none; }
-  .hamburger { display: flex; }
   .gl-hero-mosaic  { grid-template-columns: 1fr 1fr; height: 220px; }
   .gl-hero-stats   { gap: 1.2rem; }
   .gl-grid         { padding: 0 1rem; gap: .45rem; }
