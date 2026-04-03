@@ -98,7 +98,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- Original green theme CSS — homepage only -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/availability.css">
   <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body itemscope itemtype="https://schema.org/LodgingBusiness">
@@ -260,6 +262,7 @@
           <div class="prow"><span>Minimum Stay</span><span class="pamount">2 nights</span></div>
           <div class="prow"><span>Includes</span><span class="pamount">Breakfast + Daily Cleaning</span></div>
         </div>
+
       </div>
       <div class="rev-r">
         <div class="bk-form">
@@ -279,6 +282,13 @@
           <div id="form-msg" role="alert" aria-live="polite"></div>
           <button class="btn-send" id="submitBtn" onclick="handleSubmit(event)" type="submit">Send Enquiry →</button>
         </div>
+
+        <!-- LIVE AVAILABILITY CALENDAR -->
+        <div style="margin-top:1.8rem;">
+          <div style="font-family:'DM Sans',sans-serif;font-size:0.62rem;letter-spacing:0.22em;text-transform:uppercase;font-weight:700;color:rgba(14,12,8,0.4);margin-bottom:0.8rem;">📅 Live Availability</div>
+          <div data-availability data-months="2" class="av-light"></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -329,19 +339,19 @@
 </section>
 
 <section id="explore" style="background:var(--jungle);padding:7rem 4rem;position:relative;overflow:hidden;" aria-labelledby="explore-h2">
-  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sunset),var(--glow),transparent);"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--leaf),var(--gold),transparent);"></div>
   <div style="text-align:center;margin-bottom:4rem;">
     <p class="tag" style="justify-content:center;color:var(--white);">Beyond the Villa</p>
     <h2 class="h2" id="explore-h2" style="color:white;">Explore <em>South Goa</em></h2>
-    <div class="gline" style="margin:1.5rem auto;background:linear-gradient(90deg,var(--sunset),var(--glow));"></div>
+    <div class="gline" style="margin:1.5rem auto;background:linear-gradient(90deg,var(--leaf),var(--gold));"></div>
     <p style="color:rgba(255,230,180,.65);font-size:.96rem;max-width:560px;margin:0 auto;line-height:1.8;">From Palolem's crescent sands to hidden jungle waterfalls — NIVRRITII puts you at the heart of South Goa's best experiences.</p>
   </div>
   <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem;max-width:1200px;margin:0 auto 3rem;">
     <a href="/area-guide#beaches" style="text-decoration:none;"><div style="background:rgba(255,255,255,.04);border:1px solid rgba(242,196,109,.12);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🏖️</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Beaches</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Palolem · Agonda · Butterfly · Talpona</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);">Explore →</div></div></a>
     <a href="/area-guide#cafes" style="text-decoration:none;"><div style="background:rgba(255,255,255,.04);border:1px solid rgba(242,196,109,.12);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🍽️</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Restaurants</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Goan seafood · Beach shacks · Hidden gems</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);">Explore →</div></div></a>
     <a href="/area-guide#activities" style="text-decoration:none;"><div style="background:rgba(255,255,255,.04);border:1px solid rgba(242,196,109,.12);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🐬</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Activities</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Dolphins · Kayaking · Wildlife · Yoga</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);">Explore →</div></div></a>
-    <a href="/area-guide#party" style="text-decoration:none;"><div style="background:rgba(255,255,255,.04);border:1px solid rgba(242,196,109,.12);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🎉</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Sundowners</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Night life · Carnival · Clubs</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);">Explore →</div></div></a>
-    <a href="/blog" style="text-decoration:none;"><div style="background:rgba(242,196,109,.06);border:1px solid rgba(242,196,109,.22);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">✍️</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Blog</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Seasons · Festivals · Travel Tips</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--glow);">Read →</div></div></a>
+    <a href="/area-guide#party" style="text-decoration:none;"><div style="background:rgba(255,255,255,.04);border:1px solid rgba(242,196,109,.12);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">🎉</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Sundowners</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Silent Noise · Carnival · Kala Bahia</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--white);">Explore →</div></div></a>
+    <a href="/blog" style="text-decoration:none;"><div style="background:rgba(242,196,109,.06);border:1px solid rgba(242,196,109,.22);border-radius:4px;padding:2rem 1.5rem;text-align:center;transition:all .35s;" class="explore-card"><div style="font-size:2.5rem;margin-bottom:1rem;">✍️</div><div style="font-family:'Playfair Display',serif;font-size:1rem;color:white;margin-bottom:.5rem;">Blog</div><div style="font-size:.76rem;color:rgba(255,230,180,.55);line-height:1.6;">Seasons · Festivals · Travel Tips</div><div style="margin-top:1.2rem;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);">Read →</div></div></a>
   </div>
   <div style="text-align:center;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
     <a href="/area-guide" class="btn-g" style="border-radius:3px;font-size:.78rem;">Full South Goa Guide →</a>
@@ -382,6 +392,7 @@
   </div>
 </footer>
 
+<script src="/js/availability.js"></script>
 <script src="/js/main.js"></script>
 </body>
 </html>

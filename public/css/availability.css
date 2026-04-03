@@ -1,0 +1,184 @@
+/* =============================================
+   NIVRRITII — Availability Calendar CSS
+   availability.css
+   ============================================= */
+
+.av-calendars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+.av-month {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 1.4rem;
+}
+
+/* Dark section override (for booking section) */
+.so.light .av-month,
+#booking .av-month {
+  background: var(--sand, #f5ead4);
+  border-color: rgba(14,12,8,0.08);
+}
+
+.av-month-title {
+  font-family: 'Syne', 'Playfair Display', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--honey, #f2c46d);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#booking .av-month-title,
+.av-light .av-month-title {
+  color: var(--gold, #e8952a);
+}
+
+.av-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.av-day-hdr {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255,255,255,0.3);
+  padding: 0.3rem 0;
+}
+
+#booking .av-day-hdr,
+.av-light .av-day-hdr {
+  color: rgba(14,12,8,0.35);
+}
+
+.av-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  border-radius: 5px;
+  transition: transform 0.15s;
+}
+
+.av-empty   { background: transparent; }
+
+.av-past {
+  color: rgba(255,255,255,0.18);
+  background: transparent;
+}
+
+.av-available {
+  background: rgba(90,184,112,0.18);
+  color: rgba(90,184,112,0.9);
+  font-weight: 500;
+  cursor: default;
+}
+.av-available:hover { transform: scale(1.15); }
+
+.av-blocked {
+  background: rgba(201,79,26,0.2);
+  color: rgba(201,79,26,0.7);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.av-today {
+  outline: 2px solid var(--honey, #f2c46d);
+  outline-offset: -1px;
+  font-weight: 700;
+}
+
+/* Dark section past cells */
+#booking .av-past,
+.av-light .av-past    { color: rgba(14,12,8,0.2); }
+#booking .av-available,
+.av-light .av-available { background: rgba(45,122,74,0.15); color: #2d7a4a; }
+#booking .av-blocked,
+.av-light .av-blocked   { background: rgba(201,79,26,0.12); color: #c94f1a; }
+#booking .av-today,
+.av-light .av-today     { outline-color: var(--gold, #e8952a); }
+#booking .av-day-hdr    { color: rgba(14,12,8,0.35); }
+
+/* Legend */
+.av-legend {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.av-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+}
+
+#booking .av-legend-item,
+.av-light .av-legend-item { color: rgba(14,12,8,0.45); }
+
+.av-dot {
+  width: 10px; height: 10px;
+  border-radius: 3px; flex-shrink: 0;
+}
+.av-dot--available { background: rgba(90,184,112,0.7); }
+.av-dot--blocked   { background: rgba(201,79,26,0.6); }
+.av-dot--past      { background: rgba(255,255,255,0.15); }
+
+#booking .av-dot--past,
+.av-light .av-dot--past { background: rgba(14,12,8,0.15); }
+
+/* Footer */
+.av-footer {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.28);
+  margin-top: 0.6rem;
+  text-align: right;
+}
+.av-footer a {
+  color: var(--honey, #f2c46d);
+  text-decoration: none;
+}
+.av-footer a:hover { text-decoration: underline; }
+
+#booking .av-footer,
+.av-light .av-footer { color: rgba(14,12,8,0.3); }
+#booking .av-footer a { color: var(--gold, #e8952a); }
+
+/* Loading / error states */
+.av-loading, .av-error {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.4);
+  padding: 2rem;
+  text-align: center;
+}
+.av-error a {
+  color: var(--honey, #f2c46d);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .av-calendars       { grid-template-columns: 1fr; gap: 1rem; }
+  .av-cell            { font-size: 0.68rem; }
+  .av-legend          { gap: 1rem; }
+}
