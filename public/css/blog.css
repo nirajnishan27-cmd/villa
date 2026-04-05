@@ -510,7 +510,7 @@ body {
 /* =============================================
    NAV ACTIVE STATE FOR BLOG
    ============================================= */
-.nav-links a.active { color: var(--glow); }
+.nav-links a.active { color: rgba(255,255,255,0.82) }
 .nav-links a.active::after { width: 100%; }
 
 /* =============================================

@@ -1,4 +1,4 @@
-# 🌴 Villa Serenidade — South Goa Airbnb Website
+# 🌴 Villa Nivrritii — South Goa Airbnb Website
 
 A fully responsive, production-ready villa website built with **Node.js + Express**.
 
@@ -62,26 +62,9 @@ OWNER_EMAIL=youremail@gmail.com  ← where enquiries go
 
 ---
 
-## 🎨 Customisation Checklist
 
-- [ ] Replace `Villa Serenidade` with your villa name (search & replace in index.html)
-- [ ] Swap Unsplash photo URLs with your actual villa photos
-- [ ] Update pricing (search `₹18,000` in index.html)
-- [ ] Update the Google Maps embed URL with your real address
-- [ ] Update stats (bedrooms, guests, rating, beach distance)
-- [ ] Fill in `.env` with your Gmail credentials
 
----
 
-## 🌐 Deploy to the Internet (Free)
-
-### Option A — Railway (easiest)
-```bash
-npm install -g railway
-railway login
-railway init
-railway up
-```
 
 ### Option B — Render.com
 1. Push this folder to GitHub
