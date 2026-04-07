@@ -40,25 +40,6 @@ app.get('/gallery', (req, res) => {
 });
 
 
-const https = require('https');
- 
-// Your Airbnb iCal URL — update token if it ever expires
-const AIRBNB_ICAL = 'https://www.airbnb.co.in/calendar/ical/1446975461633065515.ics?t=58f0bbacb1b24fad8dddd555cc5ab520';
- 
-app.get('/api/availability', (req, res) => {
-  https.get(AIRBNB_ICAL, (response) => {
-    let data = '';
-    response.on('data', chunk => data += chunk);
-    response.on('end', () => {
-      res.setHeader('Content-Type', 'text/plain');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Cache-Control', 'public, max-age=3600'); // cache 1 hour
-      res.send(data);
-    });
-  }).on('error', () => {
-    res.status(500).json({ error: 'Could not fetch calendar' });
-  });
-});
 
 // 404 handler
 app.use((req, res) => {

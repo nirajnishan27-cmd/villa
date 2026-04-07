@@ -8,7 +8,7 @@ A fully responsive, production-ready villa website built with **Node.js + Expres
 
 ### 1. Install dependencies
 ```bash
-cd villa-serenidade
+cd villa-nivrritii
 npm install
 ```
 
