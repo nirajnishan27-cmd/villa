@@ -58,6 +58,17 @@ app.get('/api/availability', (req, res) => {
 });
 
 
+
+app.get('/sitemap.xml', (req, res) => {
+  res.setHeader('Content-Type', 'application/xml');
+  res.sendFile(path.join(__dirname, 'public', 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
+});
+
 // 404 handler
 app.use((req, res) => {
   res.status(404).send('<h2>Page not found</h2><a href="/">Go Home</a>');

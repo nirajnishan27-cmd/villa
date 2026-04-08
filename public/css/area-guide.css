@@ -288,8 +288,8 @@ body::after {
    SECTION WRAPPERS
    ============================================= */
 .so { position: relative; }
-.so.light { background: var(--cream); }
-.so.sand  { background: var(--sand); }
+.so.light { background: var(--white); }
+.so.sand  { background: var(--white); }
 .so.dark  { background: var(--deep); }
 .so.ink   { background: var(--ink); }
 .sw { max-width: 1300px; margin: 0 auto; padding: 6rem 4rem; }
