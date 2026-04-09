@@ -4,14 +4,14 @@
    ============================================= */
 
 :root {
-  --g-ink:    #0e0c08;
-  --g-deep:   #1a1710;
-  --g-bark:   #2d2318;
-  --g-terr:   #c94f1a;
-  --g-amber:  #e8922a;
-  --g-honey:  #f2c46d;
-  --g-cream:  #fdf6e8;
-  --g-sand:   #f5ead4;
+  --g-ink:    #0d2b1a;
+  --g-deep:   #0a1f12;
+  --g-bark:   #1a4a2e;
+  --g-terr:   #2d7a4a;
+  --g-amber:  #5ab870;
+  --g-honey:  #d4a843;
+  --g-cream:  #fefdf8;
+  --g-sand:   #f2e8d5;
   --g-serif:  'Cormorant Garamond', Georgia, serif;
   --g-sans:   'Syne', sans-serif;
   --g-body:   'DM Sans', sans-serif;
@@ -22,8 +22,8 @@
 html  { scroll-behavior: smooth; }
 body  {
   font-family: var(--g-body);
-  background: var(--g-ink);
-  color: var(--g-cream);
+  background: var(--g-sand);
+  color: var(--g-ink);
   overflow-x: hidden;
   cursor: none;
 }
@@ -43,7 +43,7 @@ body  {
 .gl-hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 60% at 20% 60%, rgba(201,79,26,.18), transparent 65%);
+  background: radial-gradient(ellipse 70% 60% at 20% 60%, rgba(45,122,74,.25), transparent 65%);
   pointer-events: none;
 }
 .gl-hero-overlay {
@@ -111,7 +111,7 @@ body  {
 /* ── FILTER BAR ──────────────────────────────── */
 .gl-filter-bar {
   position: sticky; top: 62px; z-index: 400;
-  background: rgba(14,12,8,.97);
+  background: rgba(13,43,26,.97);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,.06);
 }
@@ -135,16 +135,17 @@ body  {
 .gl-tab.active { color: var(--g-honey); border-bottom-color: var(--g-terr); }
 
 /* ── MAIN GALLERY ─────────────────────────────── */
-.gl-main { background: var(--g-ink); }
+.gl-main { background: var(--g-sand); }
 
 /* ── SECTIONS ─────────────────────────────────── */
 .gl-section {
   padding: 5rem 0 4rem;
-  border-top: 1px solid rgba(255,255,255,.05);
+  border-top: 1px solid rgba(13,43,26,.08);
   scroll-margin-top: 130px;
+  background: var(--white);
 }
-.gl-section--dark  { background: var(--g-deep); }
-.gl-section--warm  { background: var(--g-bark); }
+.gl-section--dark  { background: var(--white); }
+.gl-section--warm  { background: #ffffff; }
 
 .gl-sec-head {
   max-width: 1300px; margin: 0 auto;
@@ -153,9 +154,9 @@ body  {
   align-items: start; gap: 2rem;
 }
 .gl-sec-head--light .gl-sec-title,
-.gl-sec-head--light .gl-sec-desc { color: var(--g-cream); }
+.gl-sec-head--light .gl-sec-desc { color: var(--black); }
 .gl-sec-head--light .gl-sec-title em { color: var(--g-honey); }
-.gl-sec-head--light .gl-sec-text { color: rgba(242,196,109,.4); }
+.gl-sec-head--light .gl-sec-text { color: rgba(0, 0, 0, 0.4); }
 .gl-sec-head--light .gl-sec-line { background: var(--g-honey); }
 
 .gl-sec-label {
@@ -165,18 +166,18 @@ body  {
 .gl-sec-text {
   font-family: var(--g-sans); font-size: .54rem;
   letter-spacing: .28em; text-transform: uppercase;
-  color: rgba(201,79,26,.7); font-weight: 700;
+  color: rgba(45,122,74,.8); font-weight: 700;
 }
 .gl-sec-title {
   font-family: var(--g-serif);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 300; line-height: 1; letter-spacing: -.01em;
-  color: var(--g-cream);
+  color: var(--g-ink);
 }
 .gl-sec-title em { font-style: italic; color: var(--g-honey); }
 .gl-sec-desc {
   font-family: var(--g-body); font-size: .82rem; font-weight: 300;
-  color: rgba(253,246,232,.4); line-height: 1.8; max-width: 320px;
+  color: rgba(13,43,26,.5); line-height: 1.8; max-width: 320px;
   padding-top: .6rem;
 }
 
@@ -204,7 +205,8 @@ body  {
 .gl-item {
   position: relative; overflow: hidden;
   border-radius: 8px; cursor: pointer;
-  background: rgba(255,255,255,.04);
+  background: rgba(13,43,26,.05);
+  border: 1px solid rgba(13,43,26,.08);
 }
 .gl-item img {
   width: 100%; height: 100%;
@@ -329,13 +331,13 @@ body  {
 
 /* ── CTA ──────────────────────────────────────── */
 .gl-cta {
-  background: var(--g-deep); padding: 7rem 4rem; text-align: center;
+  background: var(--g-ink); padding: 7rem 4rem; text-align: center;
   position: relative; overflow: hidden;
-  border-top: 1px solid rgba(255,255,255,.05);
+  border-top: 1px solid rgba(13,43,26,.15);
 }
 .gl-cta-glow {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,79,26,.16), transparent 60%);
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(45,122,74,.22), transparent 60%);
   pointer-events: none;
 }
 .gl-cta-over {
@@ -366,7 +368,7 @@ body  {
 /* ── TAB ACTIVE STATE ─────────────────────────── */
 
 /* ── NAV ACTIVE ───────────────────────────────── */
-.nav-links a.active { color: var(--glow); }
+.nav-links a.active { color: var(--gold); }
 .nav-links a.active::after { width: 100%; }
 
 /* ── RESPONSIVE ───────────────────────────────── */
