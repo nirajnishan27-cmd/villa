@@ -33,17 +33,28 @@
     <priority>0.8</priority>
   </url>
 
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://www.nivrritii.com/gallery</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Post 2 -->
   <url>
     <loc>https://www.nivrritii.com/blog/goa-festivals-calendar</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Gallery -->
+
+  <!-- Blog Post 3 -->
   <url>
-    <loc>https://www.nivrritii.com/gallery</loc>
-    <lastmod>2026-03-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://www.nivrritii.com/blog/goa-monsoon-guide</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
