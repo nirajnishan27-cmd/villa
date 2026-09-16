@@ -57,4 +57,11 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url>
+    <loc>https://www.nivrritii.com/blog/temples-spiritual-journey-south-goa</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
